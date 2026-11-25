@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Configurer mon volet roulant — Breizh Innovation</title>
+<meta name="description" content="Configurez votre volet roulant sur mesure en ligne : dimensions, tablier, coloris, motorisation. Devis gratuit sous 48 h, sans paiement en ligne.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span class="hide-sm">Devis gratuit · Aucun paiement en ligne · Métré sur place offert</span>
+    <span>Besoin d'aide ? <a href="tel:+33749695715">07 49 69 57 15</a></span>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="Breizh Innovation, accueil">
+      <span class="brand-logo" data-logo="light"></span>
+    </a>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html#produits">Nos volets</a>
+      <a href="index.html#methode">Comment ça marche</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="btn btn-primary" href="#ma-demande">Ma demande <b id="navCount">(0)</b></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> › <a href="index.html#produits">Volets roulants</a> › Configurateur</div>
+      <span class="eyebrow">Configurateur en ligne</span>
+      <h1 style="font-size:clamp(2rem,4vw,3rem)">Configurez votre volet roulant sur mesure</h1>
+      <p class="lead">Ajoutez autant de fenêtres que nécessaire, puis envoyez votre demande. Nous vous recontactons sous 48 h avec un devis détaillé. <strong>Aucun paiement n'est demandé en ligne.</strong></p>
+    </div>
+  </section>
+
+  <div class="container conf" id="configurator">
+    <form class="conf-steps" id="confForm" novalidate autocomplete="off"></form>
+
+    <aside class="conf-aside" aria-label="Aperçu et récapitulatif">
+      <div class="preview-card">
+        <div class="preview-stage" id="preview"></div>
+        <div class="preview-ctrl">
+          <span>Fermé</span>
+          <input type="range" id="openRange" min="0" max="100" value="45" aria-label="Position du volet dans l'aperçu">
+          <span>Ouvert</span>
+        </div>
+        <div class="recap">
+          <h4 id="recapTitle">Récapitulatif</h4>
+          <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+          <dl id="recapList"></dl>
+          <div id="recapAlert"></div>
+          <div class="actions">
+            <button type="button" class="btn btn-primary btn-block" id="addBtn">Ajouter à ma demande</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart" id="ma-demande">
+        <h4>Ma demande de devis <b id="cartCount">0</b></h4>
+        <div id="cartList"><p class="cart-empty">Aucun volet ajouté pour l'instant.</p></div>
+        <button type="button" class="btn btn-light btn-block" id="checkoutBtn" disabled>Finaliser ma demande</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Finalisation -->
+  <section class="checkout section" id="checkout" style="padding-top:0">
+    <div class="container" style="max-width:920px">
+      <div class="form-card" id="checkoutCard">
+        <span class="eyebrow">Dernière étape</span>
+        <h2>Vos coordonnées</h2>
+        <p class="hint" style="margin-bottom:22px">Vérifiez votre demande et indiquez où nous pouvons vous joindre. Rien n'est facturé à ce stade.</p>
+        <div class="order-lines" id="orderLines"></div>
+
+        <form id="customerForm" novalidate>
+          <div class="field">
+            <span class="conf-group-title">Vous êtes</span>
+            <div class="seg">
+              <input type="radio" name="profil" id="pPart" value="Particulier" checked><label for="pPart">Particulier</label>
+              <input type="radio" name="profil" id="pPro" value="Professionnel"><label for="pPro">Professionnel</label>
+            </div>
+          </div>
+          <div class="row-2">
+            <div class="field"><label for="fNom">Nom et prénom <span class="req">*</span></label><input class="input" id="fNom" name="nom" required autocomplete="name"></div>
+            <div class="field"><label for="fSoc">Société <span class="hint">(si pro)</span></label><input class="input" id="fSoc" name="societe" autocomplete="organization"></div>
+          </div>
+          <div class="row-2">
+            <div class="field"><label for="fTel">Téléphone <span class="req">*</span></label><input class="input" id="fTel" name="tel" type="tel" required autocomplete="tel"></div>
+            <div class="field"><label for="fMail">E-mail <span class="req">*</span></label><input class="input" id="fMail" name="email" type="email" required autocomplete="email"></div>
+          </div>
+          <div class="field"><label for="fAdr">Adresse du chantier <span class="req">*</span></label><input class="input" id="fAdr" name="adresse" required autocomplete="street-address"></div>
+          <div class="row-2">
+            <div class="field"><label for="fCp">Code postal <span class="req">*</span></label><input class="input" id="fCp" name="cp" required inputmode="numeric" maxlength="5" autocomplete="postal-code"></div>
+            <div class="field"><label for="fVille">Commune <span class="req">*</span></label><input class="input" id="fVille" name="ville" required autocomplete="address-level2"></div>
+          </div>
+          <div class="row-2">
+            <div class="field"><label for="fCreneau">Meilleur moment pour vous rappeler</label>
+              <select class="input" id="fCreneau" name="creneau"><option>Peu importe</option><option>Matin (8h–12h)</option><option>Début d'après-midi (13h30–16h)</option><option>Fin de journée (16h–19h)</option></select>
+            </div>
+            <div class="field"><label for="fDelai">Délai souhaité</label>
+              <select class="input" id="fDelai" name="delai"><option>Dès que possible</option><option>Dans le mois</option><option>Dans 1 à 3 mois</option><option>Je me renseigne</option></select>
+            </div>
+          </div>
+          <div class="field"><label for="fMsg">Précisions (accès, étage, photos à envoyer…)</label><textarea class="input" id="fMsg" name="message"></textarea></div>
+          <label class="check"><input type="checkbox" id="fRgpd" required> J'accepte que Breizh Innovation utilise ces informations pour établir mon devis et me recontacter. Aucune donnée n'est transmise à des tiers.</label>
+          <div class="alert alert-info" style="margin:0 0 18px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <span>Votre demande n'engage à rien. Le prix définitif vous est communiqué par devis après vérification des cotes ; le règlement se fait directement avec l'entreprise.</span>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Envoyer ma demande de devis</button>
+        </form>
+      </div>
+
+      <div class="form-card success" id="successCard" hidden>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h2>Merci, votre demande est prête !</h2>
+        <p class="lead" style="margin:0 auto">Votre messagerie s'est ouverte avec le détail de votre commande : il vous suffit de cliquer sur « Envoyer ». Nous vous rappelons sous 48 h.</p>
+        <div class="ref" id="orderRef"></div>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap" class="no-print">
+          <a class="btn btn-primary" id="mailAgain" href="#">Ouvrir à nouveau l'e-mail</a>
+          <button class="btn btn-ghost" type="button" onclick="window.print()">Imprimer le récapitulatif</button>
+          <a class="btn btn-ghost" href="index.html">Retour à l'accueil</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="margin-top:0;border:0;padding-top:0">
+      <span>© <span data-year></span> Breizh Innovation · Lieu-dit Le Busset, 56530 Quéven · <a href="tel:+33749695715">07 49 69 57 15</a></span>
+      <span><a href="index.html">Accueil</a> · <a href="logos.html">Propositions de logo</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/common.js"></script>
+<script src="assets/js/configurateur.js"></script>
+</body>
+</html>

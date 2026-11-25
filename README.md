@@ -1,0 +1,27 @@
+# Site Breizh Innovation — Volets roulants sur mesure
+
+Site statique (HTML / CSS / JS, sans framework ni base de données).
+
+| Page | Rôle |
+|---|---|
+| `index.html` | Accueil : gamme, méthode, motorisation, zone, FAQ, contact |
+| `commande.html` | Configurateur de commande (inspiré de Qualiferm), plusieurs volets par demande |
+| `logos.html` | 5 propositions de nouveau logo (page interne, `noindex`) |
+
+## Prise de commande
+- **Aucun paiement** : le client configure, ajoute ses volets, puis envoie une *demande de devis*.
+- L'envoi ouvre la messagerie du client avec le récapitulatif complet adressé à `bzhinnov.comptabilite@gmail.com`, avec une référence `BI-AAMMJJ-XXXX`.
+- La demande en cours est gardée dans le navigateur (localStorage) tant qu'elle n'est pas envoyée.
+
+Pour recevoir les demandes sans passer par la messagerie du client, il suffira de brancher un service de formulaire (Formspree, Netlify Forms, Web3Forms…) dans `assets/js/configurateur.js`, à l'endroit où `mailto` est construit.
+
+## Modifier les produits
+Tout est dans `assets/js/common.js` : `PRODUCTS`, `TABLIERS`, `COLORS`, `MANOEUVRES`, `AXES`, `COMPANY` (téléphone, e-mail, adresse).
+
+## Mettre en ligne
+Copier le dossier tel quel sur n'importe quel hébergement (OVH, o2switch, Netlify, GitHub Pages…).
+
+## À compléter avant mise en ligne
+- Mentions légales et politique de confidentialité (SIRET, assureur décennal).
+- Photos réelles de chantiers (les visuels actuels sont des illustrations vectorielles).
+- Logo définitif une fois la piste choisie dans `logos.html`.

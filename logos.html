@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propositions de logo — Breizh Innovation</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* Couleurs des logos : s'inversent automatiquement sur fond sombre */
+  .on-light,.fav-light{--l-ink:#0D1726;--l-paper:#FFFFFF;--l-mid:#5D6778}
+  .on-dark{--l-ink:#FFFFFF;--l-paper:#0D1726;--l-mid:#A9B4C6}
+  .li{fill:var(--l-ink)} .lp{fill:var(--l-paper)} .lm{fill:var(--l-mid)}
+  .la{fill:#1F5BD6} .lg{fill:#F2B33D}
+  .sli{stroke:var(--l-ink)} .sla{stroke:#1F5BD6}
+  .t{font-family:Manrope,system-ui,sans-serif}
+  .logo-grid{grid-template-columns:1fr;max-width:1000px}
+  .logo-stage > div{min-height:240px}
+  .logo-stage svg{max-width:400px}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-original.png" alt="Logo Breizh Innovation" width="75" height="50">
+      <span class="brand-text"><strong>BREIZH INNOVATION</strong><small>Identité visuelle</small></span>
+    </a>
+    <nav class="nav" style="position:static;transform:none;flex-direction:row;background:none;box-shadow:none;border:0;padding:0;z-index:auto">
+      <a class="btn btn-dark btn-sm" href="index.html">Voir le site</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section" style="padding-top:48px">
+  <div class="container">
+    <span class="eyebrow">Identité visuelle</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem)">Propositions de nouveaux logos</h1>
+    <p class="lead" style="margin-bottom:36px">Cinq pistes qui gardent l'ADN du logo actuel (le Gwenn ha Du et les hermines bretonnes) tout en le rendant plus moderne, lisible en petit et clairement associé aux volets roulants.</p>
+
+    <div class="current-logo">
+      <img src="assets/logo-original.png" alt="Logo actuel Breizh Innovation">
+      <div>
+        <h3>Logo actuel</h3>
+        <p>Points forts : identité bretonne immédiate grâce au drapeau. Limites : image pixelisée (195 px), texte peu lisible en petit, aucun lien visuel avec le métier, rendu difficile sur fond sombre, sur un véhicule ou en broderie.</p>
+      </div>
+    </div>
+
+    <div class="logo-grid" id="logoGrid"></div>
+
+    <div class="alert alert-info" style="margin-top:32px">
+      <span>Tous les logos sont vectoriels (SVG) : nets à toutes les tailles, du favicon au lettrage de camionnette. Une fois la piste choisie, on peut ajuster les couleurs, la typographie et décliner cartes de visite, signature mail et habillage véhicule.</span>
+    </div>
+  </div>
+</main>
+
+<!-- ======= Gabarits des logos ======= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Moucheture d'hermine stylisée -->
+    <symbol id="ermine" viewBox="0 0 20 30">
+      <circle cx="10" cy="3" r="2.3"/><circle cx="5.2" cy="6.2" r="2.3"/><circle cx="14.8" cy="6.2" r="2.3"/>
+      <path d="M10 8.5C11.4 13.5 12.2 17.5 15.5 24.5L12.2 23 10 29.5 7.8 23 4.5 24.5C7.8 17.5 8.6 13.5 10 8.5Z"/>
+    </symbol>
+    <mask id="slatsMask" maskUnits="userSpaceOnUse" x="0" y="0" width="400" height="140">
+      <rect width="400" height="140" fill="#fff"/>
+      <g fill="#000"><rect y="44" width="400" height="3"/><rect y="56" width="400" height="3"/><rect y="68" width="400" height="3"/><rect y="80" width="400" height="3"/></g>
+    </mask>
+    <mask id="monoMask" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="120">
+      <rect width="120" height="120" fill="#fff"/>
+      <g fill="#000"><rect y="47" width="120" height="2.6"/><rect y="56" width="120" height="2.6"/><rect y="65" width="120" height="2.6"/></g>
+    </mask>
+    <path id="sealTop" d="M18 60A42 42 0 0 1 102 60"/>
+    <path id="sealBottom" d="M14 60A46 46 0 0 0 106 60"/>
+  </defs>
+</svg>
+
+<template id="logo-1">
+  <svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="14" width="92" height="92" rx="20" class="li"/>
+    <rect x="26" y="28" width="60" height="11" rx="3" class="lp"/>
+    <rect x="29" y="43" width="54" height="5.5" rx="1.5" class="lp"/>
+    <rect x="29" y="52" width="54" height="5.5" rx="1.5" class="lp"/>
+    <rect x="29" y="61" width="54" height="5.5" rx="1.5" class="lp"/>
+    <use href="#ermine" x="43" y="70" width="26" height="31" class="lg"/>
+    <text x="120" y="60" class="t li" font-size="34" font-weight="800" letter-spacing="1">BREIZH</text>
+    <text x="121" y="86" class="t li" font-size="19" font-weight="500" letter-spacing="5.6">INNOVATION</text>
+    <text x="121" y="104" class="t la" font-size="9.5" font-weight="800" letter-spacing="2.2">VOLETS ROULANTS SUR MESURE</text>
+  </svg>
+</template>
+<template id="fav-1">
+  <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" class="li"/><rect x="12" y="11" width="40" height="8" rx="2" class="lp"/><rect x="14" y="22" width="36" height="4" rx="1" class="lp"/><rect x="14" y="29" width="36" height="4" rx="1" class="lp"/><rect x="14" y="36" width="36" height="4" rx="1" class="lp"/><use href="#ermine" x="26" y="41" width="12" height="17" class="lg"/></svg>
+</template>
+
+<template id="logo-2">
+  <svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="18" width="94" height="10" rx="2" class="li"/>
+    <rect x="12" y="28" width="90" height="76" class="lp sli" stroke-width="2"/>
+    <g class="li">
+      <rect x="54" y="28" width="48" height="8.5"/><rect x="54" y="45" width="48" height="8.5"/><rect x="12" y="62" width="90" height="8.5"/><rect x="12" y="79" width="90" height="8.5"/><rect x="12" y="96" width="90" height="8"/>
+    </g>
+    <use href="#ermine" x="18" y="31" width="11" height="15" class="li"/>
+    <use href="#ermine" x="35" y="31" width="11" height="15" class="li"/>
+    <use href="#ermine" x="26.5" y="44" width="11" height="15" class="li"/>
+    <rect x="12" y="28" width="90" height="76" fill="none" class="sli" stroke-width="2"/>
+    <text x="120" y="62" class="t li" font-size="33" font-weight="800">Breizh</text>
+    <text x="120" y="92" class="t li" font-size="27" font-weight="400">Innovation</text>
+  </svg>
+</template>
+<template id="fav-2">
+  <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" class="lp"/><rect x="8" y="8" width="48" height="7" rx="1.5" class="li"/><g class="li"><rect x="32" y="15" width="24" height="6"/><rect x="32" y="27" width="24" height="6"/><rect x="8" y="39" width="48" height="6"/><rect x="8" y="51" width="48" height="5"/></g><use href="#ermine" x="14" y="17" width="12" height="17" class="li"/><rect x="8" y="15" width="48" height="41" fill="none" class="sli" stroke-width="2"/></svg>
+</template>
+
+<template id="logo-3">
+  <svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 56 58 18l44 38" fill="none" class="sla" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="28" y="52" width="60" height="52" rx="3" class="li"/>
+    <rect x="34" y="58" width="48" height="40" rx="1.5" fill="#CFE3F7"/>
+    <g class="la"><rect x="34" y="58" width="48" height="5"/><rect x="34" y="65" width="48" height="5"/><rect x="34" y="72" width="48" height="5"/></g>
+    <rect x="34" y="78" width="48" height="2.5" class="li"/>
+    <text x="118" y="66" class="t li" font-size="36" font-weight="800" letter-spacing="-1">breizh</text>
+    <text x="119" y="94" class="t la" font-size="25" font-weight="600" letter-spacing="-.4">innovation</text>
+  </svg>
+</template>
+<template id="fav-3">
+  <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" class="lp"/><path d="M8 30 32 10l24 20" fill="none" class="sla" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="16" y="28" width="32" height="28" rx="2" class="li"/><rect x="20" y="32" width="24" height="20" fill="#CFE3F7"/><g class="la"><rect x="20" y="32" width="24" height="3"/><rect x="20" y="36.5" width="24" height="3"/><rect x="20" y="41" width="24" height="3"/></g></svg>
+</template>
+
+<template id="logo-4">
+  <svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(0,0)">
+      <circle cx="60" cy="60" r="54" class="li"/>
+      <circle cx="60" cy="60" r="33" fill="none" style="stroke:var(--l-paper)" stroke-width="1" opacity=".35"/>
+      <text class="t lp" font-size="8.5" font-weight="800" letter-spacing="2.4" text-anchor="middle"><textPath href="#sealTop" startOffset="50%">BREIZH INNOVATION</textPath></text>
+      <text class="t lp" font-size="8" font-weight="700" letter-spacing="2.4" text-anchor="middle"><textPath href="#sealBottom" startOffset="50%">QUÉVEN · 56</textPath></text>
+      <g mask="url(#monoMask)"><text x="60" y="70" text-anchor="middle" class="t lp" font-size="34" font-weight="800" letter-spacing="-1">BI</text></g>
+      <use href="#ermine" x="52" y="73" width="16" height="20" class="lg"/>
+    </g>
+    <text x="132" y="58" class="t li" font-size="30" font-weight="800" letter-spacing=".5">BREIZH</text>
+    <text x="132" y="84" class="t li" font-size="18" font-weight="600" letter-spacing="4.4">INNOVATION</text>
+    <rect x="132" y="94" width="30" height="3" rx="1.5" class="lg"/>
+  </svg>
+</template>
+<template id="fav-4">
+  <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="58" class="li"/><g mask="url(#monoMask)"><text x="60" y="75" text-anchor="middle" class="t lp" font-size="46" font-weight="800">BI</text></g><use href="#ermine" x="52" y="82" width="16" height="22" class="lg"/></svg>
+</template>
+
+<template id="logo-5">
+  <svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
+    <rect x="12" y="30" width="6" height="62" rx="3" class="lg"/>
+    <g mask="url(#slatsMask)"><text x="32" y="84" class="t li" font-size="54" font-weight="800" letter-spacing="-1.5">BREIZH</text></g>
+    <text x="34" y="106" class="t lm" font-size="15.5" font-weight="700" letter-spacing="9.6">INNOVATION</text>
+    <use href="#ermine" x="236" y="40" width="20" height="30" class="lg"/>
+  </svg>
+</template>
+<template id="fav-5">
+  <svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" class="lg"/><g mask="url(#monoMask)" transform="translate(-28,-28)"><text x="60" y="78" text-anchor="middle" class="t" fill="#0D1726" font-size="44" font-weight="800">B</text></g></svg>
+</template>
+
+<script>
+  const LOGOS = [
+    { n: 1, name: "Lames & Hermine", tag: "Recommandé", palette: ["#0D1726", "#FFFFFF", "#F2B33D", "#1F5BD6"],
+      desc: "Un pictogramme carré qui dessine un coffre et ses lames, signé d'une hermine dorée. Le métier est compris en un coup d'œil, la Bretagne reste présente. Très lisible en petit et parfait en icône d'application ou en favicon." },
+    { n: 2, name: "Gwenn ha Du", tag: "Fidèle à l'existant", palette: ["#000000", "#FFFFFF"],
+      desc: "Évolution directe du logo actuel : le drapeau breton devient un volet roulant, avec son coffre et ses lames noires et blanches. On garde la reconnaissance acquise auprès des clients, en version nette et moderne." },
+    { n: 3, name: "Maison & Volet", tag: "Grand public", palette: ["#0D1726", "#1F5BD6", "#CFE3F7"],
+      desc: "Une maison et sa fenêtre au volet mi-clos, avec un wordmark en minuscules plus chaleureux. Une piste rassurante et immédiatement compréhensible pour les particuliers." },
+    { n: 4, name: "Sceau BI", tag: "Premium artisan", palette: ["#0D1726", "#FFFFFF", "#F2B33D"],
+      desc: "Un monogramme BI rayé façon lames de volet dans un sceau d'artisan mentionnant Quéven. Un rendu haut de gamme qui fonctionne très bien en broderie, en tampon et sur les véhicules." },
+    { n: 5, name: "Wordmark Lames", tag: "Minimaliste", palette: ["#0D1726", "#5D6778", "#F2B33D"],
+      desc: "Le nom seul, en capitales fortes, traversé de fines lignes comme un tablier de volet, accompagné d'une hermine. Sobre et très « marque », idéal pour l'enseigne et le lettrage." }
+  ];
+  const grid = document.getElementById("logoGrid");
+  grid.innerHTML = LOGOS.map(l => {
+    const svg = document.getElementById("logo-" + l.n).innerHTML;
+    const fav = document.getElementById("fav-" + l.n).innerHTML;
+    return `<article class="logo-card">
+      <div class="logo-stage"><div class="on-light">${svg}</div><div class="on-dark">${svg}</div></div>
+      <div class="logo-meta">
+        <h3>${l.n}. ${l.name} <small>${l.tag}</small></h3>
+        <p>${l.desc}</p>
+        <div class="logo-extra">
+          <span class="fav fav-light on-light">${fav}</span>
+          <span class="fav on-dark" style="background:#0D1726">${fav}</span>
+          <span class="hint">Icône / favicon</span>
+          <span style="flex:1"></span>
+          <span class="palette">${l.palette.map(c => `<i style="background:${c}" title="${c}"></i>`).join("")}</span>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+</script>
+</body>
+</html>
