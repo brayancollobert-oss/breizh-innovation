@@ -9,14 +9,14 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <div class="topbar">
   <div class="container">
-    <span class="hide-sm">Devis gratuit · Aucun paiement en ligne · Métré sur place offert</span>
+    <span class="hide-sm"><span class="dot"></span>Devis gratuit · Aucun paiement en ligne · Métré sur place offert</span>
     <span>Besoin d'aide ? <a href="tel:+33749695715">07 49 69 57 15</a></span>
   </div>
 </div>
@@ -24,7 +24,8 @@
 <header class="header">
   <div class="container">
     <a class="brand" href="index.html" aria-label="Breizh Innovation, accueil">
-      <span class="brand-logo" data-logo="light"></span>
+      <span class="brand-logo"><img src="assets/logo-breizh-innovation.svg" alt="Breizh Innovation" width="101" height="58"></span>
+      <span class="brand-tag">Volets roulants<br>sur mesure</span>
     </a>
     <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="nav" aria-label="Navigation principale">
@@ -41,9 +42,15 @@
   <section class="page-hero">
     <div class="container">
       <div class="breadcrumb"><a href="index.html">Accueil</a> › <a href="index.html#produits">Volets roulants</a> › Configurateur</div>
-      <span class="eyebrow">Configurateur en ligne</span>
-      <h1 style="font-size:clamp(2rem,4vw,3rem)">Configurez votre volet roulant sur mesure</h1>
-      <p class="lead">Ajoutez autant de fenêtres que nécessaire, puis envoyez votre demande. Nous vous recontactons sous 48 h avec un devis détaillé. <strong>Aucun paiement n'est demandé en ligne.</strong></p>
+      <span class="eyebrow">Devis en ligne</span>
+      <h1>Configurez votre volet roulant.</h1>
+      <p class="lead">Ajoutez autant de fenêtres que nécessaire, puis envoyez votre demande. Nous vous rappelons sous 48 h avec un devis détaillé.</p>
+      <div class="assurances">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Aucun paiement en ligne</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Métré sur place offert</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fabrication française</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Garantie décennale</span>
+      </div>
     </div>
   </section>
 
@@ -52,6 +59,7 @@
 
     <aside class="conf-aside" aria-label="Aperçu et récapitulatif">
       <div class="preview-card">
+        <div class="preview-head"><span>Aperçu du coloris</span><span id="previewName"></span></div>
         <div class="preview-stage" id="preview"></div>
         <div class="preview-ctrl">
           <span>Fermé</span>
@@ -144,7 +152,7 @@
   <div class="container">
     <div class="footer-bottom" style="margin-top:0;border:0;padding-top:0">
       <span>© <span data-year></span> Breizh Innovation · Lieu-dit Le Busset, 56530 Quéven · <a href="tel:+33749695715">07 49 69 57 15</a></span>
-      <span><a href="index.html">Accueil</a> · <a href="logos.html">Propositions de logo</a></span>
+      <span><a href="index.html">Accueil</a> · <a href="index.html#contact">Contact</a></span>
     </div>
   </div>
 </footer>

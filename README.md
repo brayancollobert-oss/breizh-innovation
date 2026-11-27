@@ -23,5 +23,10 @@ Copier le dossier tel quel sur n'importe quel hébergement (OVH, o2switch, Netli
 
 ## À compléter avant mise en ligne
 - Mentions légales et politique de confidentialité (SIRET, assureur décennal).
-- Photos réelles de chantiers (les visuels actuels sont des illustrations vectorielles).
-- Logo définitif une fois la piste choisie dans `logos.html`.
+- Vérifier avec Qualiferm l'autorisation d'utiliser ses photos produits (`assets/img/p-*.jpg`, 300 px).
+
+## Visuels
+- Logo : redessin vectoriel fidèle du logo d'origine (`assets/logo-breizh-innovation.svg`).
+- Photos de chantiers : site actuel breizh-innovation.fr (`assets/img/chantier-*.jpg`, `hero.jpg`, `telecommande.jpg`, `volet-toit-solaire.jpg`).
+- Photos produits : fabricant Qualiferm (`assets/img/p-*.jpg`).
+- Originaux non retouchés dans `assets/img/source/` (non publiés).

@@ -137,6 +137,9 @@
     }
   ];
 
+  /* Photos produits (fabricant Qualiferm) */
+  PRODUCTS.forEach(p => { p.img = `assets/img/p-${p.id}.jpg`; });
+
   /* ---------- Utils couleurs ---------- */
   function shade(hex, pct) {
     const n = parseInt(hex.slice(1), 16);

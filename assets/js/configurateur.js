@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hint: "Toute la gamme est fabriquée en France, sur mesure.",
       done: () => !!state.product,
       html: () => `<div class="choices product-choices">${PRODUCTS.map(p =>
-        choice("product", p.id, p.short, "", { pre: shutterSVG(Object.assign({ ratio: 0.9 }, p.visual)), badge: p.tagGold ? "Solaire" : (p.tag === "Le plus demandé" ? "Top" : "") })).join("")}</div>`
+        choice("product", p.id, p.short, "", { pre: `<img src="${p.img}" alt="" loading="lazy">`, badge: p.tagGold ? "Solaire" : (p.tag === "Le plus demandé" ? "Populaire" : "") })).join("")}</div>`
     },
     dims: {
       title: "Dimensions",
@@ -234,6 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
       moustiquaire: state.moustiquaire && previewOpen > .2
     }));
     $("#openRange").closest(".preview-ctrl").style.display = p.visual.mode ? "none" : "";
+    const pn = $("#previewName"); if (pn) pn.textContent = p.visual.mode === "axe" ? "" : COLORS[state.coloris].name;
 
     const steps = stepList();
     const done = steps.filter(k => STEPS[k].done()).length;
@@ -348,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (missingSteps().length) return;
     const p = product();
     cart.push({
-      name: p.name, ref: p.ref, qty: +state.qty || 1, repere: state.repere,
+      name: p.name, ref: p.ref, img: p.img, qty: +state.qty || 1, repere: state.repere,
       dims: p.dims === "axe" ? `L ${state.L} mm` : `${state.L} × ${state.H} mm`,
       lines: summary(), state: Object.assign({}, state),
       visual: Object.assign({}, p.visual, { color: state.coloris, coffre: p.dims === "reno" ? state.coffre : p.visual.coffre, ratio: (+state.H / +state.L) || 1, open: .45 })
@@ -364,7 +365,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const sec = $("#checkout"); sec.classList.add("open");
     $("#orderLines").innerHTML = cart.map(it => `
       <div class="order-line">
-        ${shutterSVG(it.visual)}
+        <img src="${esc(it.img || (PRODUCTS.find(x => x.name === it.name) || {}).img || "")}" alt="">
+
         <div><strong>${esc(it.name)}</strong>${it.repere ? ` — ${esc(it.repere)}` : ""}
           <p>${it.lines.filter(l => !["Quantité"].includes(l[0])).map(l => `${l[0]} : ${esc(l[1])}`).join(" · ")}</p></div>
         <span class="qty">× ${it.qty}</span>

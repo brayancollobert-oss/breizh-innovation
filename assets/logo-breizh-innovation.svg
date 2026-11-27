@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 124" role="img" aria-label="Breizh Innovation">
+  <defs>
+    <symbol id="erm" viewBox="0 0 20 24">
+      <circle cx="10" cy="2.6" r="2.4"/><circle cx="5" cy="5.6" r="2.4"/><circle cx="15" cy="5.6" r="2.4"/>
+      <path d="M10 7.2C11.2 11.5 12.4 15 18.5 22.5L13 20.6 10 24 7 20.6 1.5 22.5C7.6 15 8.8 11.5 10 7.2Z"/>
+    </symbol>
+  </defs>
+  <rect x="1" y="1" width="214" height="122" fill="#fff" stroke="#000" stroke-width="2"/>
+  <g fill="#000">
+    <rect x="123" y="1" width="92" height="15.5"/>
+    <rect x="123" y="37" width="92" height="17"/>
+    <rect x="123" y="76" width="92" height="16"/>
+    <rect x="1" y="91" width="214" height="2"/>
+    <rect x="1" y="106" width="214" height="17"/>
+    <rect x="121.5" y="1" width="1.8" height="92"/>
+  </g>
+  <g font-family="'Arial Black','Archivo Black',Arial,Helvetica,sans-serif" font-weight="900" fill="#000">
+    <text x="5" y="39.5" font-size="30" textLength="112" lengthAdjust="spacingAndGlyphs">BREIZH</text>
+    <text x="5" y="64.5" font-size="16.5" textLength="113" lengthAdjust="spacingAndGlyphs">INNOVATION</text>
+  </g>
+  <g fill="#000">
+    <use href="#erm" x="12" y="76" width="11" height="13"/>
+    <use href="#erm" x="31" y="76" width="11" height="13"/>
+    <use href="#erm" x="50" y="76" width="11" height="13"/>
+    <use href="#erm" x="69.5" y="76" width="11" height="13"/>
+    <use href="#erm" x="89" y="76" width="11" height="13"/>
+  </g>
+</svg>
