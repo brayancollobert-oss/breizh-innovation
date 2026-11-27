@@ -1,6 +1,7 @@
 /* Breizh Innovation — données partagées + rendu SVG des volets */
 (function (w) {
   "use strict";
+  document.documentElement.classList.add("js");
 
   const COMPANY = {
     name: "Breizh Innovation",
@@ -384,10 +385,13 @@
     const yr = document.querySelectorAll("[data-year]");
     yr.forEach(e => e.textContent = new Date().getFullYear());
 
+    /* Apparition au défilement : sans jamais laisser un bloc ou une photo masqués */
+    const showAll = () => document.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
     if ("IntersectionObserver" in window) {
-      const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 });
+      const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0, rootMargin: "0px 0px -8% 0px" });
       document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-    } else document.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
+      setTimeout(showAll, 2500);
+    } else showAll();
   }
 
   function toast(msg) {
